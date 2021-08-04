@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
 
+html {
+  height: 100%;
+
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Kumbh Sans', sans-serif;
   overflow-x: hidden;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 :root {
@@ -15,10 +27,7 @@
   --darkblack: #25293a;
   --lightblack: #333950;
   --grey: #647b95;
-  --orange: #F05B5B;
 }
-
-
 
 .btn.dark-purple {
 cursor: pointer;
@@ -31,10 +40,11 @@ width: 9rem;
 -webkit-box-shadow: -5px 9px 9px -8px rgba(0,0,0,0.79); 
 box-shadow: -5px 9px 9px -8px rgba(0,0,0,0.79);
 }
-
 .btn.dark-purple:hover {
-  background-color: #829CFF;
+background-color: var(--lightpurple);
 }
+
+
 
 h1 {
   color: var(--darkblack);
@@ -42,17 +52,21 @@ h1 {
 }
 
 
+
+
+
 /* ------------ HEADER ------------  */
+
 nav {
   width: 100%;
   margin: 4rem 7rem;
 }
 
-
 .cta {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
+  overflow: hidden;
 }
 
 .item-1 
@@ -67,14 +81,13 @@ width: 100%;
   color: #747B95;
   font-weight: lighter;
 }
+
+
 .item-2 .charts {
   opacity: 1;
   z-index: 999;
 }
-
-
 .item-2 .bg-pattern {
- display: block;
 position: absolute;
 top: -30rem;
 right: -15rem;
@@ -83,75 +96,15 @@ z-index: -1;
 
 
 
-/* PLANS SECTION */
+
+
+/* ------------ PLANS SECTION ------------ */
 
 .plans {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
-}
-
-footer {
-  position: relative;
-  background-color: var(--darkblack);
-  grid-column: 1 / -1;
-  grid-row: 2 / span 3;
-  z-index: -1;
-  bottom: 0;
-}
-
-.countdown {
-display: flex;
-}
-
-.days, .hours, .min, .sec {
-  background-color: #333950;
-  margin: 0 0.5rem;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  color: #fff;
-  font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.time {
-  color: #999CA7;
-  font-size: 1rem;
-}
-
-.ft-item-1 {
-display: flex;
-align-items: center;
-justify-content: space-around;
-margin-top: 30rem;
-}
-/* 
- footer h3 {
-  font-size: 1.5rem;
-  color: #fff;
-  transform: translate(15rem,29rem);
-  font-size: 1.3rem;
-  word-spacing: 0.2rem;
-  font-weight: lighter;
-} */
-
- footer h3 {
-   position: absolute;
-   margin: 28rem 15rem;
-  font-size: 1.5rem;
-  color: #fff;
-  font-size: 1.3rem;
-  word-spacing: 0.2rem;
-}
-
-.purple-text {
-  color: #5175FF;
-}
-h3:nth-of-type(2n) {
-font-size: 3rem;
-color: var(--darkblack);
 }
 
 
@@ -168,11 +121,8 @@ color: var(--darkblack);
   grid-column: 1 / span 5;
   grid-row: 1 / span 2;
 }
-
-
-
-.card-1 p:nth-of-type(1), .card-2 p:nth-of-type(1), .card-3 p:nth-of-type(1) {
-margin-bottom: 4rem;
+.package p:nth-of-type(1) {
+margin-top: 4rem;
 color: var(--lightblack);
 }
 .card-1, .card-2, .card-3 {
@@ -192,6 +142,8 @@ margin:  1.3rem 0;
 background-color: #C2CFFF;
 cursor: pointer;
 }
+
+
 .card-1 p, .card-3 p {
 margin:  1rem 0;
 color: var(--grey);
@@ -204,7 +156,16 @@ color: var(--grey);
 -webkit-box-shadow: 5px 5px 13px -6px rgba(0,0,0,0.69); 
 box-shadow: 5px 5px 13px -6px rgba(0,0,0,0.69);
   padding: 2rem;
+}h3:nth-of-type(2n) {
+font-size: 3rem;
+color: var(--lightblack);
 }
+h3:nth-of-type(2n) {
+font-size: 3rem;
+color: var(--lightblack);
+}
+
+
 .card-2 {
   position: relative;
   text-align: center;
@@ -214,10 +175,6 @@ box-shadow: 5px 5px 13px -6px rgba(0,0,0,0.69);
 box-shadow: 5px 5px 13px -6px rgba(0,0,0,0.69);
 padding: 2rem;
 }
-
-.card-2 {
- 
-}
 .card-2 h3 {
 color: #fff;
 }
@@ -226,14 +183,123 @@ margin:  1rem 0;
 color: #fff !important;
 }
 .card-2 button {
+position: relative;
 background-color: #fff;
-cursor: pointer;
 }
 .card-2 button:hover {
-color: var(--lightpurple);
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--lightpurple);
 }
 
+
+.card-2 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  top: 0;
+  right: 0.1rem;
+}
+
+
+
+
+
+/* ------------- FOOTER SECTION ------------- */
+
+footer {
+  position: relative;
+  background-color: var(--darkblack);
+  grid-column: 1 / -1;
+  grid-row: 2 / span 3;
+  z-index: -1;
+  bottom: 0;
+  opacity: 1;
+}
+
+footer img {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+
+.days, .hours, .min, .sec {
+  background-color: #333950;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.time {
+  color: #999CA7;
+  font-size: 1rem;
+}
+
+
+ footer h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  font-size: 1.3rem;
+  word-spacing: 0.2rem;
+}
+
+
+.ft-item-1 {
+  display: grid;
+  margin-top:25rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.countdown {
+  display: flex;
+}
+
+.countdown {
+  grid-column: 1 / 2;
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+footer .btn.dark-purple {
+position: relative;
+cursor: pointer;
+}
+footer .btn.dark-purple a {
+text-decoration: none;
+color: #fff;
+}
+
+.purple-text {
+  color: #5175FF;
+}
+
+
+
+
+
+
+
 /* ------------- Sign Up Page ------------- */
+
 .side-bg {
   position: fixed;
   background-color: var(--darkblack);
@@ -272,11 +338,12 @@ transform: rotate(180deg);
   margin-left: 0.5rem;
 }
 
-.left-section .countdown {
+.left-section .signup-countdown {
   margin-top: 1rem;
 }
 
-.left-section .days, .left-section .hours,         .left-section .min,.left-section .sec {
+.left-section .signup-days, .left-section .signup-hours,       
+.left-section .signup-min, .left-section .signup-sec {
 width: 6rem;
 height: 7rem;
 display: flex;
@@ -287,7 +354,7 @@ color: #5175FF;
 background-color: #EEF1FF;
 } 
 
-.time {
+.signup-time {
   font-weight: lighter;
 }
 
@@ -357,11 +424,16 @@ select .package-type {
   color: black;
 }
 
-#signup-nav {
-  
-}
 
-/* ------------ MEDIA QUERIES ------------  */
+
+
+
+
+
+
+
+
+/* ------------------------ MEDIA QUERIES ------------------------  */
 
 /* ------------ TABLET ------------ */
 
@@ -379,23 +451,17 @@ select .package-type {
   }
 
 
-  .ft-item-1 {
-    margin-top: 50rem;
-    display: flex;
-    flex-direction: column;
-    margin-top: 40rem;
-  }
+.ft-item-1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 65rem;
+}
 
-  footer h3 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+footer button {
+  margin-top: 1.5rem;
+}
 
-  }
 
-  .ft-item-1 button {
-    margin-top: 1.5rem;
-  }
 
   .item-1 {
    padding: 3rem;
@@ -423,7 +489,7 @@ select .package-type {
 
   .card-1, .card-2, .card-3 {
    width: 90vw;
-   height: 28vh;
+   height: 65vh;
    margin: 0;
    padding: 0;
    line-height: 1.5;
@@ -461,24 +527,22 @@ margin-bottom: 0;
 } 
 
 
+
+
+
 /* ------------ MOBILE ------------ */
 
  @media(max-width: 415px) {
-
-
-
   nav {
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     margin-top: 3rem;
-    background-color: blue !important;
   }
 
   .cta {
     grid-template-columns: 20rem;
-    grid-template-rows: repeat(2, 35rem);
     justify-content: center;
   }
 
@@ -492,8 +556,8 @@ margin-bottom: 0;
     flex-direction: column;
     justify-self: center;
     align-self: center;
-    overflow: hidden;
-  }.item-1 button {margin: 0 auto;}
+  
+  }.item-1 button {margin: 1rem auto;}
 
   .item-1 h1 {
     font-size: 2rem;
@@ -516,8 +580,8 @@ margin-bottom: 0;
 
 
   .card-1, .card-2, .card-3 {
-   width: 90vw;
-   height: 850px;
+   width: 85vw;
+   height: 800px;
    margin: 0;
    padding: 0;
    line-height: 1.5;
@@ -525,12 +589,16 @@ margin-bottom: 0;
    display: flex;
    flex-direction: column;
    line-height: normal;
-   padding: 3rem;
+    font-size: 1rem;
+  }
+
+  .card-1, .card-2, .card-3 {
+    position: relative;
   }
 
    .card-1 button,  .card-2 button,  .card-3 button { 
    position: absolute;
-   margin-top: 23rem;
+   bottom: 5rem;
   }
   .card-1 h3 {
 font-size: 2rem;
@@ -539,9 +607,36 @@ font-size: 2rem;
 .card-1 > div:nth-of-type(2), .card-2 > div:nth-of-type(2), .card-3 > div:nth-of-type(2)  {
   margin-bottom: 25rem;
 }
+
+footer {
+
+height: 105rem;
+margin: 0;
+padding: 0;
 }
 
+.ft-item-1 {
+  margin-top: 35rem;
+}
+
+.days, .hours, .min, .sec {
+ font-size: 1.3rem;
+margin: 0 auto;
+
+}
+
+
+}
+
+
+
+
+
+
+
 /* ------------ SIGN UP MEDIA QUERIES -------- */
+/* ------------ TABLET -------- */
+
 @media(max-width: 950px) {
   .grid {
     width: 100%;
@@ -575,27 +670,81 @@ font-size: 2rem;
   }
 
   form {
+    margin-top: 4rem;
+  }
 
-   margin-bottom: 5rem;
+  footer img {
+    width: 1500px;
   }
 
 
 
+}
 
-  .side-bg {
-    position: fixed;
-    order: -1;
-    bottom: 0;
-    height: 35vh;
-    width: 100%;
-
+/* ------------ MOBILE -------- */
+@media(max-width: 450px) {
+  #signup-nav {
+   margin: 0;
+   position: relative;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   margin-top: 3rem;
+   z-index: 999;
   }
 
-
-  .side-bg img {
-     width: 100vw;
-     height: 100vw;   
-     transform: rotate(90deg);
-     margin-left: 50%;
+  .grid {
+    text-align: center;
   }
+
+  .left-section {
+    margin-top: 5rem;
+  }
+  .left-section p {
+    padding: 0 2rem;
+  }
+   .left-section br {
+    display: none;
+  }
+
+.signup-days, .signup-hours, .signup-min, .signup-sec {
+display: flex;
+flex-direction: column;
+}
+.signup-countdown {
+width: 25rem;
+padding: 2rem;
+}
+.signup-time {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+form {
+  width: 20rem;
+}
+.right-section form .btn.dark-purple  {
+  width: 17rem;
+}
+
+.side-bg img {
+  width: 90vw;
+  height: 40vh;
+}
+
+
+
+  /* .nav-bg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    z-index: -1;
+    top: 0;
+  } */
+
+  
 }
