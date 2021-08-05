@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
 
-html {
-  height: 100%;
-
-}
 
 * {
   margin: 0;
@@ -14,10 +10,10 @@ html {
 }
 
 
-body {
+html, body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+min-height: 100vh;
 }
 
 :root {
@@ -325,6 +321,7 @@ transform: rotate(180deg);
   justify-items: center;
   align-items: center;
   padding-bottom: 10rem;
+  flex: 1;
 }
 
 .left-section h1 {
@@ -332,7 +329,7 @@ transform: rotate(180deg);
 }
 
 .left-section h3 {
-  margin-top: 2.5rem;
+  margin: 3rem 0;
   word-spacing: 0.2rem;
   letter-spacing: 0.2rem;
   margin-left: 0.5rem;
@@ -340,6 +337,7 @@ transform: rotate(180deg);
 
 .left-section .signup-countdown {
   margin-top: 1rem;
+  display: flex;
 }
 
 .left-section .signup-days, .left-section .signup-hours,       
@@ -352,10 +350,17 @@ justify-content: center;
 overflow: hidden;
 color: #5175FF;
 background-color: #EEF1FF;
+text-align: center;
+font-size: 2.5rem;
+font-weight: bold;
+border-radius: 1rem;
+margin: 0 0.5rem;
 } 
 
 .signup-time {
   font-weight: lighter;
+  font-size: 1rem;
+  color: var(--grey);
 }
 
 
@@ -384,6 +389,7 @@ input, select {
 input::placeholder {
 color: var(--grey);
 }
+
 
 form {
   width: 30rem;
@@ -440,7 +446,6 @@ select .package-type {
 @media(max-width: 835px) {
 
   .cta {
-    
     align-items: center;
   }
 
@@ -640,7 +645,7 @@ margin: 0 auto;
 @media(max-width: 950px) {
   .grid {
     width: 100%;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
   }
 
@@ -651,7 +656,6 @@ margin: 0 auto;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
-
   }
   .left-section h1 br { 
     display: none;
@@ -665,16 +669,32 @@ margin: 0 auto;
   }
 
 .right-section {
+  display: grid;
+  justify-items: center;
   order: 2;
-
   }
 
   form {
-    margin-top: 4rem;
+    position: absolute;
+    z-index: 999;
+    margin-top: 1rem;
+
+    
   }
 
-  footer img {
-    width: 1500px;
+  .side-bg img {
+    width: 100vw;
+    height: 100vh;
+    
+  }
+
+  .side-bg {
+    position: sticky;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    bottom: 0;
+    order: 2;
   }
 
 
@@ -729,8 +749,7 @@ form {
 }
 
 .side-bg img {
-  width: 90vw;
-  height: 40vh;
+display: none !important;
 }
 
 
