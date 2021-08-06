@@ -100,7 +100,7 @@ z-index: -1;
 .plans {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   justify-content: center;
 }
 
@@ -216,6 +216,7 @@ footer {
   z-index: -1;
   bottom: 0;
   opacity: 1;
+  width: 100vw;
 }
 
 footer img {
@@ -254,7 +255,7 @@ height: 100%;
   display: grid;
   margin-top:25rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
 }
@@ -460,12 +461,22 @@ select .package-type {
 .ft-item-1 {
   display: flex;
   flex-direction: column;
-  margin-top: 65rem;
+  margin: 30rem 0;
+}
+.footer-btn {
+  margin-top: 2.5rem;
+}
+footer {
+  position: relative;
+}
+footer img {
+ position: absolute;
+ width: 2200px;
+ height: 1200px;
+ bottom: 0;
+
 }
 
-footer button {
-  margin-top: 1.5rem;
-}
 
 
 
@@ -494,23 +505,39 @@ footer button {
   }
 
   .card-1, .card-2, .card-3 {
+position: relative;
    width: 90vw;
-   height: 65vh;
-   margin: 0;
-   padding: 0;
+   height: 25vh;
    line-height: 1.5;
    text-align: left;
    display: flex;
    align-items: center;
    justify-content: space-between;
    line-height: normal;
-   padding: 3rem;
    overflow: hidden;
+   padding: 10rem;
   }
+
+  
 
   .card-1 > div,  .card-2 > div,  .card-3 > div {
     margin-bottom: 5rem;
   }
+
+    .card-1 > div:nth-of-type(1), .card-2 > div:nth-of-type(1), .card-3 > div:nth-of-type(1){
+      position: absolute;
+      left: 3rem;
+  }
+
+     .card-1 > div:nth-of-type(2),   .card-2 > div:nth-of-type(2),   .card-3 > div:nth-of-type(2){
+      position: absolute;
+      right: 3rem;
+  }
+
+  .cards button {
+    left: 3rem;
+  }
+
 
   .card-1 p, .card-3 p {
     color: var(--grey) !important;
@@ -527,7 +554,7 @@ margin-bottom: 0;
 }
   .card-1 button,  .card-2 button,  .card-3 button { 
    position: absolute;
-   margin-top: 12rem;
+   margin-top: 15rem;
   }
 
 } 
@@ -614,15 +641,28 @@ font-size: 2rem;
   margin-bottom: 25rem;
 }
 
-footer {
+/* SORTTTTTTTTTTTTTTTTTTTTT */
 
-height: 105rem;
-margin: 0;
-padding: 0;
+.card-1 > div:nth-of-type(1),        .card-2 > div:nth-of-type(1),        .card-3 > div:nth-of-type(1) {
+  right: 20%;
+
+}.card-1 > div:nth-of-type(2), .card-2 > div:nth-of-type(2), .card-3 > div:nth-of-type(2) {
+margin-top: 18rem;
+left: 10%;
+}
+.cards button {
+  left: 23%;
+}
+
+footer {
+position: absolute;
+width: 100vw;
+height: 80rem;
 }
 
 .ft-item-1 {
   margin-top: 35rem;
+
 }
 
 .days, .hours, .min, .sec {
@@ -751,7 +791,8 @@ form {
 }
 
 .side-bg img {
-display: none !important;
+width: 100vw;
+height: 80vh;
 }
 
 
