@@ -13,7 +13,7 @@
 html, body {
   display: flex;
   flex-direction: column;
-min-height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -24,6 +24,11 @@ min-height: 100vh;
   --darkblack: #25293a;
   --lightblack: #333950;
   --grey: #647b95;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .btn.dark-purple {
@@ -641,35 +646,46 @@ font-size: 2rem;
   margin-bottom: 25rem;
 }
 
-/* SORTTTTTTTTTTTTTTTTTTTTT */
+
+
 
 .card-1 > div:nth-of-type(1),        .card-2 > div:nth-of-type(1),        .card-3 > div:nth-of-type(1) {
-  right: 20%;
+right: 0;
+left: 0;
 
 }.card-1 > div:nth-of-type(2), .card-2 > div:nth-of-type(2), .card-3 > div:nth-of-type(2) {
 margin-top: 18rem;
-left: 10%;
+right: 0;
+left: 0;
 }
+
 .cards button {
-  left: 23%;
+  left: auto;
+  right: auto;
 }
 
 footer {
-position: absolute;
+position: relative;
 width: 100vw;
 height: 80rem;
+bottom: 0;
 }
 
-.ft-item-1 {
-  margin-top: 35rem;
 
+.ft-item-1 {
+position: absolute;
+margin-bottom: 35rem;
+width: 100vw;
+bottom: 0;
 }
 
 .days, .hours, .min, .sec {
  font-size: 1.3rem;
-margin: 0 auto;
+margin: 0 0.3rem;
 
 }
+
+
 
 
 }
