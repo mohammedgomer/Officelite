@@ -15,7 +15,6 @@ html, body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: red;
 }
 
 :root {
@@ -475,6 +474,7 @@ select .package-type {
 }
 footer {
   position: relative;
+  width: 100%;
 }
 footer img {
  position: absolute;
