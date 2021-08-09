@@ -27,10 +27,9 @@ html, body {
 }
 
 .wrapper {
-  position: relative;
   max-width: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .btn.dark-purple {
@@ -615,7 +614,7 @@ margin-bottom: 0;
 
   .plans {
     position: relative;
-    bottom: 10rem;
+    bottom: 0;
   }
 
 
@@ -728,7 +727,7 @@ margin: 0 0.3rem;
   }
 
 .right-section {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   order: 2;
@@ -743,7 +742,7 @@ margin: 0 0.3rem;
   }
 
   .side-bg img {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     
   }
