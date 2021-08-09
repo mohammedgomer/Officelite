@@ -473,8 +473,9 @@ select .package-type {
   margin-top: 2.5rem;
 }
 footer {
+  margin: 0 auto;
   position: relative;
-  width: 100%;
+  max-width: 100vw;
 }
 footer img {
  position: absolute;
@@ -509,6 +510,7 @@ footer img {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 3rem;
+    margin: 0 auto;
   }
 
   .card-1, .card-2, .card-3 {
